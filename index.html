@@ -20,7 +20,7 @@
    }(document, 'script', 'facebook-jssdk'));
 
 
-  function statusCheck() {
+  function checkLoginState() {
     FB.getLoginStatus(function(response) {
         console.log(response);
         accessToken = response.authResponse.accessToken;
@@ -30,11 +30,6 @@
   }
 </script>
 
-<button onclick="statusCheck()">
-status check/reading token
-</button>
-
-<br /><br />
 
 <fb:login-button 
   scope="read_audience_network_insights"
